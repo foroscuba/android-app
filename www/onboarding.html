@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#0F1115" />
+    <title>FCuba</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="onboarding">
+    <button id="skip" class="skip-btn" aria-label="Saltar la presentación">Saltar</button>
+
+    <div id="slides" class="slides">
+      <section class="slide" id="slide-1">
+        <img src="img/icon-welcome.png" alt="" class="slide-icon" aria-hidden="true" />
+        <p class="eyebrow">Bienvenido</p>
+        <h1 class="display">Bienvenidos a Foros Cuba.</h1>
+        <p class="subtitle">Tu casa digital. Pasa, ponte cómodo.</p>
+      </section>
+
+      <section class="slide" id="slide-2">
+        <img src="img/icon-freedom.png" alt="" class="slide-icon" aria-hidden="true" />
+        <p class="eyebrow">Libertad</p>
+        <h1 class="display">La plataforma de los cubanos libres.</h1>
+        <p class="subtitle">Un espacio donde se piensa, se debate y se respeta.</p>
+      </section>
+
+      <section class="slide" id="slide-3">
+        <img src="img/icon-world.png" alt="" class="slide-icon" aria-hidden="true" />
+        <p class="eyebrow">Comunidad global</p>
+        <h1 class="display">Hecho para los cubanos alrededor del mundo.</h1>
+        <p class="subtitle">De La Habana a Madrid, de Miami a Berlín. Aquí estamos todos.</p>
+      </section>
+
+      <section class="slide" id="slide-4">
+        <img src="img/icon-voice.png" alt="" class="slide-icon" aria-hidden="true" />
+        <p class="eyebrow">Voz libre</p>
+        <h1 class="display">Aquí nadie podrá callar tu voz.</h1>
+        <p class="subtitle">Lee, escribe y comparte sin miedo. Es tu derecho.</p>
+      </section>
+
+      <section class="slide" id="slide-5">
+        <p class="eyebrow">Listo</p>
+        <h1 class="display">Adelante.</h1>
+        <p class="subtitle">Tu cuenta y tus hilos te esperan.</p>
+
+        <button id="enter" class="enter-btn" type="button">Entrar al foro</button>
+      </section>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="dots" id="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button id="next" class="next-btn" type="button">Siguiente</button>
+    </div>
+
+    <script src="notifications.js"></script>
+    <script src="push.js"></script>
+    <script src="onboarding.js"></script>
+  </body>
+</html>

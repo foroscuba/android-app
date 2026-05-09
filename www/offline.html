@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="theme-color" content="#0F1115" />
+    <title>FCuba — Sin conexión</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="offline">
+    <div class="offline-icon" aria-hidden="true">!</div>
+    <h1 class="display">Sin conexión.</h1>
+    <p class="subtitle">
+      Necesitas internet para usar el foro. Comprueba tu wifi o tus datos móviles.
+    </p>
+    <button id="retry" class="enter-btn" type="button">Reintentar</button>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var plugins = (window.Capacitor && window.Capacitor.Plugins) || {};
+        var Network = plugins.Network;
+        var Haptics = plugins.Haptics;
+
+        function buzz(style) {
+          if (!Haptics || typeof Haptics.impact !== 'function') return;
+          Haptics.impact({ style: style || 'Light' }).catch(function () {});
+        }
+
+        function retry() {
+          buzz('Light');
+          // Re-enter via boot.js so the routing logic decides where to go.
+          window.location.replace('index.html');
+        }
+
+        document.getElementById('retry').addEventListener('click', retry);
+
+        // Auto-retry the moment the network comes back.
+        if (Network && typeof Network.addListener === 'function') {
+          Network.addListener('networkStatusChange', function (status) {
+            if (status.connected) retry();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FCuba</title>
+<meta name="description" content="Aplicación oficial del foro fcuba.net para Android.">
+<meta name="theme-color" content="#0F1115">
+<link rel="icon" type="image/png" href="img/logo.png">
+<style>
+  :root {
+    --bg: #0F1115;
+    --surface: #161a21;
+    --text: #f4f6fb;
+    --muted: #97a0b4;
+    --accent: #E63946;
+    --accent-press: #c12d3a;
+    --border: rgba(255,255,255,.08);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 24px;
+    text-align: center;
+    gap: 28px;
+  }
+  img.logo {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  }
+  h1 { font-size: 1.9rem; margin: 0; letter-spacing: -.01em; font-weight: 600; }
+  p.tagline { color: var(--muted); margin: 0; max-width: 32ch; }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .08s ease, background-color .15s ease;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--accent-press); }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    cursor: not-allowed;
+    padding: 8px;
+  }
+  .btn-secondary img { height: 44px; width: auto; opacity: .55; }
+
+  footer {
+    color: var(--muted);
+    font-size: .85rem;
+    padding: 24px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<main>
+  <img class="logo" src="img/logo.png" alt="FCuba">
+  <h1>FCuba</h1>
+  <p class="tagline">Aplicación oficial del foro fcuba.net para Android.</p>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://github.com/foroscuba/android-app/releases/download/latest/fcuba-release.apk">
+      Descargar APK
+    </a>
+    <a class="btn btn-secondary" aria-disabled="true" title="Próximamente">
+      <img src="badges/play-store.png" alt="Próximamente en Google Play">
+    </a>
+  </div>
+</main>
+
+<footer>
+  <a href="https://github.com/foroscuba/android-app">Repositorio</a>
+  ·
+  <a href="privacy.html">Privacidad</a>
+  ·
+  <a href="https://github.com/foroscuba/android-app/blob/main/LICENSE">Licencia MIT</a>
+</footer>
+
+</body>
+</html>

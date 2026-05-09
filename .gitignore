@@ -1,0 +1,48 @@
+# Node / Capacitor
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/local.properties
+android/.idea/
+android/*.iml
+android/app/*.iml
+android/app/.cxx/
+*.hprof
+
+# Capacitor generated artifacts
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/capacitor-cordova-android-plugins/
+
+# Signing (NEVER commit these)
+*.keystore
+*.jks
+android/app/release.keystore
+android/keystore.properties
+google-services.json
+
+# Firebase service account JSON — full FCM admin power, NEVER commit
+*service-account*.json
+*adminsdk*.json
+fcuba-*-firebase-*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Local inspection scratch
+.tmp-*/
